@@ -18,9 +18,19 @@ class Program
                                  .ThenInclude(s => s.Teacher)
                                  .ToList();
 
-            foreach (var r in ratings)
+            var ratingsByStudent = ratings.GroupBy(r => r.Student)
+                                          .OrderBy(g => g.Key.FirstName)
+                                          .ToList();
+
+            foreach (var studentGroup in ratingsByStudent)
             {
-                Console.WriteLine($"{r.Student?.FirstName} {r.Student?.LastName} - {r.Subject?.SubjectName} - {r.RatingValue}/{r.Subject?.MaxRating} (Teacher: {r.Subject?.Teacher?.FirstName} {r.Subject?.Teacher?.LastName})");
+                Console.WriteLine($"Student: {studentGroup.Key?.FirstName} {studentGroup.Key?.LastName}");
+                Console.WriteLine($"Number of ratings: {studentGroup.Count()}");
+                foreach (var rating in studentGroup)
+                {
+                    Console.WriteLine($"  - {rating.Subject?.SubjectName}: {rating.RatingValue}/{rating.Subject?.MaxRating} (Teacher: {rating.Subject?.Teacher?.FirstName} {rating.Subject?.Teacher?.LastName})");
+                }
+                Console.WriteLine();
             }
         }
     }

@@ -453,3 +453,4 @@ C:\Users\Asus\OneDrive\Desktop\vscode\projects\projects\c#\StudentRatingEF\obj\D
 C:\Users\Asus\OneDrive\Desktop\vscode\projects\projects\c#\StudentRatingEF\obj\Debug\net9.0\StudentRatingEF.pdb
 C:\Users\Asus\OneDrive\Desktop\vscode\projects\projects\c#\StudentRatingEF\obj\Debug\net9.0\StudentRatingEF.genruntimeconfig.cache
 C:\Users\Asus\OneDrive\Desktop\vscode\projects\projects\c#\StudentRatingEF\obj\Debug\net9.0\ref\StudentRatingEF.dll
+C:\Users\Asus\OneDrive\Desktop\vscode\projects\projects\c#\StudentRatingEF\obj\Debug\net9.0\StudentRatingEF.sourcelink.json
